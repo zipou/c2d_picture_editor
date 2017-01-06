@@ -5,11 +5,11 @@ import Draggable from "react-draggable";
 export default class PictureSlider extends React.Component {
 
   static propsTypes = {
-    position : React.propTypes.number,
-    min : React.propTypes.number,
-    max : React.propTypes.number,
-    onDone : React.propTypes.func,
-    onChange: React.propTypes.func
+    position : React.PropTypes.number,
+    min : React.PropTypes.number,
+    max : React.PropTypes.number,
+    onDone : React.PropTypes.func,
+    onChange: React.PropTypes.func
   }
 
   constructor(props) {
