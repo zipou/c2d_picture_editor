@@ -122,10 +122,10 @@ var PictureSlider = function (_React$Component) {
 }(_react2.default.Component);
 
 PictureSlider.propsTypes = {
-  position: _react2.default.propTypes.number,
-  min: _react2.default.propTypes.number,
-  max: _react2.default.propTypes.number,
-  onDone: _react2.default.propTypes.func,
-  onChange: _react2.default.propTypes.func
+  position: _react2.default.PropTypes.number,
+  min: _react2.default.PropTypes.number,
+  max: _react2.default.PropTypes.number,
+  onDone: _react2.default.PropTypes.func,
+  onChange: _react2.default.PropTypes.func
 };
 exports.default = PictureSlider;

@@ -4,7 +4,7 @@ import PictureSlider from "./PictureSlider";
 import PictureButton from "./PictureButton";
 import PictureEditor from "./PictureEditor";
 
-export default class Picture extends React.Component {
+export class Picture extends React.Component {
 
   static propTypes= {
     buttonLabel : React.PropTypes.string.isRequired,
