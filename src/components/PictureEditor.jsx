@@ -16,7 +16,7 @@ export default class PictureEditor extends React.Component {
     min : React.PropTypes.number.isRequired,
     max : React.PropTypes.number.isRequired,
     border : React.PropTypes.number.isRequired,
-    uri : React.PropTypes.number.string,
+    uri : React.PropTypes.number.isRequired,
     x : React.PropTypes.number.isRequired,
     y : React.PropTypes.number.isRequired,
     onChange: React.PropTypes.func,

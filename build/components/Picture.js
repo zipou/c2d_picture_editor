@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.Picture = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -32,7 +33,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Picture = function (_React$Component) {
+var Picture = exports.Picture = function (_React$Component) {
   _inherits(Picture, _React$Component);
 
   function Picture(props) {
@@ -234,12 +235,11 @@ Picture.propTypes = {
   loadingLabel: _react2.default.PropTypes.string,
   height: _react2.default.PropTypes.number.isRequired,
   width: _react2.default.PropTypes.number.isRequired,
-  maxRange: _react2.default.PropTypes.string.isRequired,
-  minRange: _react2.default.PropTypes.string.isRequired,
-  minZoom: _react2.default.PropTypes.string.isRequired,
-  maxZoom: _react2.default.PropTypes.string.isRequired,
+  maxRange: _react2.default.PropTypes.number.isRequired,
+  minRange: _react2.default.PropTypes.number.isRequired,
+  minZoom: _react2.default.PropTypes.number.isRequired,
+  maxZoom: _react2.default.PropTypes.number.isRequired,
   uploadImage: _react2.default.PropTypes.func.isRequired,
   update: _react2.default.PropTypes.func.isRequired,
   load: _react2.default.PropTypes.func.isRequired
 };
-exports.default = Picture;
