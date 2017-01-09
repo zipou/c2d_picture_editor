@@ -9,6 +9,7 @@ export class Picture extends React.Component {
   static propTypes= {
     buttonLabel : React.PropTypes.string.isRequired,
     loadingLabel : React.PropTypes.string,
+    border : React.PropTypes.string,
     height : React.PropTypes.number.isRequired,
     width : React.PropTypes.number.isRequired,
     maxRange : React.PropTypes.number.isRequired,
@@ -121,7 +122,7 @@ export class Picture extends React.Component {
 
   render() {
     let {uri, x, y, scale, upload, loading} = this.state;
-    let {buttonLabel, height, width, uploadImage, loadingLabel, minRange, maxRange, minZoom, maxZoom} = this.props;
+    let {buttonLabel, height, width, uploadImage, loadingLabel, minRange, maxRange, minZoom, maxZoom, border} = this.props;
     return(
       <div>
           {loading && <span>{loadingLabel}</span>}
@@ -131,7 +132,7 @@ export class Picture extends React.Component {
             onUpload={this._handleUpload.bind(this)}
             label={buttonLabel}
           />
-        <div className="ajouter-article__photoarticle" style={{height: height, width: width}} onWheel={this._handleWheel.bind(this)}>
+        <div className="ajouter-article__photoarticle" style={{height: height, width: width, border: (border) ? border : ""}} onWheel={this._handleWheel.bind(this)}>
             <PictureEditor
               onDone={this._triggerUpdate.bind(this)}
               onChange={this._handleEditorChange.bind(this)}
