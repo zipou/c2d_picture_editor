@@ -181,7 +181,8 @@ var Picture = exports.Picture = function (_React$Component) {
           minRange = _props2.minRange,
           maxRange = _props2.maxRange,
           minZoom = _props2.minZoom,
-          maxZoom = _props2.maxZoom;
+          maxZoom = _props2.maxZoom,
+          border = _props2.border;
 
       return _react2.default.createElement(
         "div",
@@ -199,7 +200,7 @@ var Picture = exports.Picture = function (_React$Component) {
         }),
         _react2.default.createElement(
           "div",
-          { className: "ajouter-article__photoarticle", style: { height: height, width: width }, onWheel: this._handleWheel.bind(this) },
+          { className: "ajouter-article__photoarticle", style: { height: height, width: width, border: border ? border : "", overflow: "hidden" }, onWheel: this._handleWheel.bind(this) },
           _react2.default.createElement(_PictureEditor2.default, {
             onDone: this._triggerUpdate.bind(this),
             onChange: this._handleEditorChange.bind(this),
@@ -233,6 +234,7 @@ var Picture = exports.Picture = function (_React$Component) {
 Picture.propTypes = {
   buttonLabel: _react2.default.PropTypes.string.isRequired,
   loadingLabel: _react2.default.PropTypes.string,
+  border: _react2.default.PropTypes.string,
   height: _react2.default.PropTypes.number.isRequired,
   width: _react2.default.PropTypes.number.isRequired,
   maxRange: _react2.default.PropTypes.number.isRequired,

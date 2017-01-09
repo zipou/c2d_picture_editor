@@ -132,7 +132,7 @@ export class Picture extends React.Component {
             onUpload={this._handleUpload.bind(this)}
             label={buttonLabel}
           />
-        <div className="ajouter-article__photoarticle" style={{height: height, width: width, border: (border) ? border : ""}} onWheel={this._handleWheel.bind(this)}>
+        <div className="ajouter-article__photoarticle" style={{height: height, width: width, border: (border) ? border : "", overflow : "hidden"}} onWheel={this._handleWheel.bind(this)}>
             <PictureEditor
               onDone={this._triggerUpdate.bind(this)}
               onChange={this._handleEditorChange.bind(this)}
