@@ -131,7 +131,7 @@ PictureEditor.propTypes = {
   min: _react2.default.PropTypes.number.isRequired,
   max: _react2.default.PropTypes.number.isRequired,
   border: _react2.default.PropTypes.number.isRequired,
-  uri: _react2.default.PropTypes.number.isRequired,
+  uri: _react2.default.PropTypes.string,
   x: _react2.default.PropTypes.number.isRequired,
   y: _react2.default.PropTypes.number.isRequired,
   onChange: _react2.default.PropTypes.func,

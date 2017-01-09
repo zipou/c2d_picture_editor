@@ -199,7 +199,7 @@ var Picture = exports.Picture = function (_React$Component) {
         }),
         _react2.default.createElement(
           "div",
-          { className: "ajouter-article__photoarticle", style: { height: height }, onWheel: this._handleWheel.bind(this) },
+          { className: "ajouter-article__photoarticle", style: { height: height, width: width }, onWheel: this._handleWheel.bind(this) },
           _react2.default.createElement(_PictureEditor2.default, {
             onDone: this._triggerUpdate.bind(this),
             onChange: this._handleEditorChange.bind(this),
