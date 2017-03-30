@@ -1,6 +1,6 @@
 {
   "name": "c2d-picture-editor",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Picture Editor for c2d",
   "main": "build/index.js",
   "scripts": {

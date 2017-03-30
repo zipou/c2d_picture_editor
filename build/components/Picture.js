@@ -41,10 +41,12 @@ var Picture = exports.Picture = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Picture.__proto__ || Object.getPrototypeOf(Picture)).call(this, props));
 
+    var token = _this.props.token;
+
     _this.state = {
       loading: false,
       uri: null,
-      token: props.token,
+      token: token ? token : null,
       scale: 1,
       x: 1,
       y: 1
@@ -65,8 +67,10 @@ var Picture = exports.Picture = function (_React$Component) {
     key: "componentWillReceiveProps",
     value: function componentWillReceiveProps(props) {
       var oldToken = this.state.token;
-      if (props.token && oldToken != props.token) {
-        this._loadFromToken(props.token);
+      var token = props.token;
+
+      if (oldToken == null && token && oldToken != token) {
+        this._loadFromToken(token);
       }
     }
   }, {
@@ -116,10 +120,6 @@ var Picture = exports.Picture = function (_React$Component) {
     key: "_handleWheel",
     value: function _handleWheel(event) {
       return;
-      //   let {deltaY, deltaX} = event;
-      //   let {scale} = this.state;
-      //   event.preventDefault();
-      //   this._setScaleValue(scale + ((deltaY<0) ? 1 : -1))
     }
   }, {
     key: "_handleEditorChange",

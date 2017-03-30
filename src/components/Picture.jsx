@@ -23,10 +23,11 @@ export class Picture extends React.Component {
 
   constructor(props) {
     super(props);
+    let {token} = this.props;
     this.state={
       loading: false,
       uri: null,
-      token: props.token,
+      token : (token) ? token : null,
       scale : 1,
       x: 1,
       y: 1
@@ -42,8 +43,9 @@ export class Picture extends React.Component {
 
   componentWillReceiveProps(props) {
     let oldToken = this.state.token
-    if (props.token && oldToken != props.token) {
-      this._loadFromToken(props.token);
+    let {token} = props;
+    if (oldToken == null && token && oldToken != token) {
+      this._loadFromToken(token);
     }
   }
 
@@ -85,10 +87,6 @@ export class Picture extends React.Component {
 
   _handleWheel(event) {
     return;
-  //   let {deltaY, deltaX} = event;
-  //   let {scale} = this.state;
-  //   event.preventDefault();
-  //   this._setScaleValue(scale + ((deltaY<0) ? 1 : -1))
   }
 
   _handleEditorChange(x, y, crop) {
